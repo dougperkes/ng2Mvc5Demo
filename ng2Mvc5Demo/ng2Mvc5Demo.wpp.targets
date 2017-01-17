@@ -4,9 +4,9 @@
   <Target Name="AddGulpFiles" BeforeTargets="CopyAllFilesToSingleFolderForPackage;CopyAllFilesToSingleFolderForMsdeploy">
     <Message Text="Adding gulp-generated files to deploy" Importance="high"/>
     <ItemGroup>
-      <CustomFilesToInclude Include=".\lib\**\*.*" />
+      <CustomFilesToInclude Include=".\libs\**\*.*" />
       <FilesForPackagingFromProject  Include="%(CustomFilesToInclude.Identity)">
-        <DestinationRelativePath>.\lib\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+        <DestinationRelativePath>.\libs\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
       </FilesForPackagingFromProject>
     </ItemGroup>
   </Target>
